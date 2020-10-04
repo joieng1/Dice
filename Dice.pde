@@ -13,7 +13,6 @@ void draw()
   
   for(int x = 0; x < 700; x = x + 100){
     for(int y = 0; y < 700; y = y+100){
-    println(x,1000);
     bob = new Die(x,y);
     bob.roll();
     bob.show();
@@ -41,7 +40,6 @@ class Die //models one single dice cube
     }
     void show()
     {
-      println(myX,myY);
       noStroke();
       fill((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
       rect(myX, myY, 100, 100,7);
