@@ -9,7 +9,7 @@ void setup()
 void draw()
 {
   //your code here
-  background(250);
+  background((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
   
   for(int x = 0; x < 700; x = x + 100){
     for(int y = 0; y < 700; y = y+100){
