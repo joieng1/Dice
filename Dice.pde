@@ -1,23 +1,27 @@
 Die bob;
-
 void setup()
 {
-  size(700,700);  
+  size(700,800);  
   noLoop();
 }
   
 void draw()
 {
-  //your code here
-  background((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+  background(200);
+  int nums = 0;
   
-  for(int x = 0; x < 700; x = x + 100){
-    for(int y = 0; y < 700; y = y+100){
+  for(int x = 0; x < 300; x = x + 100){
+    for(int y = 0; y < 200; y = y + 100){
     bob = new Die(x,y);
     bob.roll();
     bob.show();
+    nums = nums + bob.number;
     }
-  }
+   }
+   fill(0);
+    textSize(30);
+    text(" Total: " + nums, 200, 750);
+    println(nums);
 }
 
 void mousePressed()
@@ -36,7 +40,7 @@ class Die //models one single dice cube
     }
     void roll()
     {
-     number = ((int)(Math.random()*6)+1);
+      number = (int)(Math.random()*6+1);
     }
     void show()
     {
