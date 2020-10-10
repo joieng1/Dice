@@ -10,8 +10,8 @@ void draw()
   background(200);
   int nums = 0;
   
-  for(int x = 0; x < 300; x = x + 100){
-    for(int y = 0; y < 200; y = y + 100){
+  for(int x = 0; x < 700; x = x + 100){
+    for(int y = 0; y < 700; y = y + 100){
     bob = new Die(x,y);
     bob.roll();
     bob.show();
@@ -21,7 +21,6 @@ void draw()
    fill(0);
     textSize(30);
     text(" Total: " + nums, 200, 750);
-    println(nums);
 }
 
 void mousePressed()
